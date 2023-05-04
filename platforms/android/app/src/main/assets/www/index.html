@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/googlefonts.css">
+    <link href="css/weather-icons.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+	<input id="testkeyevent" name="testkeyevent" type="text" class="form-control mr-sm-2 input_id" data-table="order-table" placeholder="請輸入關鍵字" />
+</div>
+<div id="main-container" class="container">
+	<h1 id="city" class="text-center">MOUNTAIN</h1>
+
+    <div id="current-weather" class="container">
+		
+		<div class="row text-center">
+			<div class="col-xs-5">
+				<h1 id="date">Date</h1>
+			</div>
+			<div class="col-xs-7">
+				<h1 id="weather-description">天氣概況</h1>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-5 valign" align="center">
+				<br>
+				<canvas id="weather-icon-day1" width="75" height="75"></canvas>
+			</div>
+			<div class="col-xs-5 valign" align="right">
+				<h1 id="temp1">溫度</h1>
+			</div>
+		</div>
+
+		<div class="row text-center">
+			<div class="col-xs-4">	
+			</div>
+			<div class="col-xs-8">
+				降雨機率：<h7 id="day1-precip">降雨機率</h7>
+			</div>
+		</div>
+
+    </div>
+	<hr class="style1">
+
+	<div id="w-weather" class="container">
+		<div class="row">
+			<div class="col-xs-6">	
+				最高溫度：<h7 id="day1-high">最高溫度</h7>
+			</div>
+			<div class="col-xs-6">
+				最高體感溫度：<h7 id="day1-AT-high">最高體感溫度</h7>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-6">	
+				最低溫度：<h7 id="day1-low">最低溫度</h7>
+			</div>
+			<div class="col-xs-6">
+				最低體感溫度：<h7 id="day1-AT-low">最低體感溫度</h7>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-6">	
+				風向：<h7 id="WD">風向</h7>
+			</div>
+			<div class="col-xs-6">
+				最大風速：<h7 id="WS">最大風速</h7>
+			</div>
+		</div>
+    </div>
+	
+
+	<hr class="style1">
+    <div id="w-weather" class="container">
+		<div class="row ">
+			<div class="col-xs-4 text-left">	
+				<h7 id="day2">日期</h7>
+			</div>
+			<div class="col-xs-4 text-center">
+				<canvas id="weather-icon-day2" width="25" height="25"></canvas>
+			</div>
+			<div class="col-xs-4 text-right">
+				<h7 id="temp2">溫度</h7>
+			</div>
+		</div>
+
+		<div class="row ">
+			<div class="col-xs-4 text-left">	
+				<h7 id="day3">日期</h7>
+			</div>
+			<div class="col-xs-4 text-center">
+				<canvas id="weather-icon-day3" width="25" height="25"></canvas>
+			</div>
+			<div class="col-xs-4 text-right">
+				<h7 id="temp3">溫度</h7>
+			</div>
+		</div>
+
+		<div class="row ">
+			<div class="col-xs-4 text-left">	
+				<h7 id="day4">日期</h7>
+			</div>
+			<div class="col-xs-4 text-center">
+				<canvas id="weather-icon-day4" width="25" height="25"></canvas>
+			</div>
+			<div class="col-xs-4 text-right">
+				<h7 id="temp4">溫度</h7>
+			</div>
+		</div>
+
+		<div class="row ">
+			<div class="col-xs-4 text-left">	
+				<h7 id="day5">日期</h7>
+			</div>
+			<div class="col-xs-4 text-center">
+				<canvas id="weather-icon-day5" width="25" height="25"></canvas>
+			</div>
+			<div class="col-xs-4 text-right">
+				<h7 id="temp5">溫度</h7>
+			</div>
+		</div>
+
+		<div class="row ">
+			<div class="col-xs-4 text-left">	
+				<h7 id="day6">日期</h7>
+			</div>
+			<div class="col-xs-4 text-center">
+				<canvas id="weather-icon-day6" width="25" height="25"></canvas>
+			</div>
+			<div class="col-xs-4 text-right">
+				<h7 id="temp6">溫度</h7>
+			</div>
+		</div>
+
+		<div class="row ">
+			<div class="col-xs-4 text-left">	
+				<h7 id="day7">日期</h7>
+			</div>
+			<div class="col-xs-4 text-center">
+				<canvas id="weather-icon-day7" width="25" height="25"></canvas>
+			</div>
+			<div class="col-xs-4 text-right">
+				<h7 id="temp7">溫度</h7>
+			</div>
+		</div>
+	</br>
+    </div>
+</div> <!-- end main-container -->
+
+	<!-- Why are Javascripts here? -->
+	<script src="js/jquery-2.2.4.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/skycons.js"></script>
+	<script src="js/script.js"></script>
+</body>
+
+
+<footer> <!-- Select at footer -->
+    <div id="attribution-panel" class="container">
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div id="panel-heading" class="panel-heading">
+                    <h4 class="panel-title" style="font-size: 12px">
+                        <a data-toggle="collapse" href="#collapse1">選擇山岳</a>
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse">
+                    <ul class="list-group" style="font-size: 10px">
+                        <li class="list-group-item btn_city_select">中央尖山</li>
+                        <li class="list-group-item btn_city_select">巴巴山</li>
+                        <li class="list-group-item btn_city_select">南湖大山</li>
+                        <li class="list-group-item btn_city_select">南湖大山南峰</li>
+                        <li class="list-group-item btn_city_select">雪山北峰</li>
+						<li class="list-group-item btn_city_select">雪山東峰</li>						
+						<li class="list-group-item btn_city_select">頭鷹山</li>
+                        <li class="list-group-item btn_city_select">小霸尖山</li>
+                        <li class="list-group-item btn_city_select">品田山</li>
+                        <li class="list-group-item btn_city_select">大劍山</li>
+                        <li class="list-group-item btn_city_select">甘薯峰</li>
+						<li class="list-group-item btn_city_select">志佳陽大山</li>
+						<li class="list-group-item btn_city_select">佳陽山</li>
+                        <li class="list-group-item btn_city_select">南湖大山南峰</li>
+						<li class="list-group-item btn_city_select">閂山</li>
+                        <li class="list-group-item btn_city_select">無明山</li>
+						<li class="list-group-item btn_city_select">鈴鳴山</li>
+                        <li class="list-group-item btn_city_select">劍山</li>
+                        <li class="list-group-item btn_city_select">南湖北山</li>
+						<li class="list-group-item btn_city_select">馬比杉山</li>						
+						<li class="list-group-item btn_city_select">審馬陣山</li>
+						<li class="list-group-item btn_city_select">阿玉山</li>
+                        <li class="list-group-item btn_city_select">盆盆山</li>
+                        <li class="list-group-item btn_city_select">唐穗山</li>
+                        <li class="list-group-item btn_city_select">望洋山</li>
+						<li class="list-group-item btn_city_select">銅山</li>
+						<li class="list-group-item btn_city_select">馬望來山</li>
+                        <li class="list-group-item btn_city_select">多加神山</li>
+                        <li class="list-group-item btn_city_select">太魯閣大山</li>
+						<li class="list-group-item btn_city_select">立霧主山</li>						
+						<li class="list-group-item btn_city_select">安東軍山</li>
+						<li class="list-group-item btn_city_select">奇萊主山北峰</li>
+                        <li class="list-group-item btn_city_select">奇萊主峰</li>
+                        <li class="list-group-item btn_city_select">帕托魯山</li>
+						<li class="list-group-item btn_city_select">屏風山</li>
+						<li class="list-group-item btn_city_select">磐石山</li>
+						<li class="list-group-item btn_city_select">內嶺爾山</li>
+                        <li class="list-group-item btn_city_select">石門山</li>
+						<li class="list-group-item btn_city_select">合歡山北峰</li>
+						<li class="list-group-item btn_city_select">羊頭山</li>						
+						<li class="list-group-item btn_city_select">布拉克桑山</li>
+						<li class="list-group-item btn_city_select">馬西山</li>
+						<li class="list-group-item btn_city_select">喀西帕南山</li>
+                        <li class="list-group-item btn_city_select">新康山</li>
+						<li class="list-group-item btn_city_select">白石山</li>
+						<li class="list-group-item btn_city_select">光頭山</li>
+						<li class="list-group-item btn_city_select">奇萊主山南峰</li>
+                        <li class="list-group-item btn_city_select">能高山南峰</li>
+						<li class="list-group-item btn_city_select">八通關山</li>
+						<li class="list-group-item btn_city_select">大水窟山</li>						
+						<li class="list-group-item btn_city_select">干卓萬山</li>
+						<li class="list-group-item btn_city_select">丹大山</li>
+						<li class="list-group-item btn_city_select">六順山</li>
+                        <li class="list-group-item btn_city_select">玉山北峰</li>
+						<li class="list-group-item btn_city_select">合歡山</li>
+						<li class="list-group-item btn_city_select">合歡山東峰</li>
+						<li class="list-group-item btn_city_select">秀姑巒山</li>
+                        <li class="list-group-item btn_city_select">卓社大山</li>
+						<li class="list-group-item btn_city_select">東郡大山</li>
+						<li class="list-group-item btn_city_select">東巒大山</li>						
+						<li class="list-group-item btn_city_select">牧山</li>
+						<li class="list-group-item btn_city_select">能高山主峰</li>
+						<li class="list-group-item btn_city_select">能高北峰</li>	
+                        <li class="list-group-item btn_city_select">郡大山</li>
+						<li class="list-group-item btn_city_select">馬利加南山</li>
+						<li class="list-group-item btn_city_select">馬博拉斯山</li>
+						<li class="list-group-item btn_city_select">無雙山</li>
+						<li class="list-group-item btn_city_select">萬東山西峰</li>
+						<li class="list-group-item btn_city_select">義西請馬至山</li>
+						<li class="list-group-item btn_city_select">駒盆山</li>						
+						<li class="list-group-item btn_city_select">西巒大山</li>
+						<li class="list-group-item btn_city_select">南大水窟山</li>
+						<li class="list-group-item btn_city_select">達芬尖山</li>
+                        <li class="list-group-item btn_city_select">玉山西峰</li>
+						<li class="list-group-item btn_city_select">玉山東峰</li>
+						<li class="list-group-item btn_city_select">玉山前峰</li>
+						<li class="list-group-item btn_city_select">白姑大山</li>
+                        <li class="list-group-item btn_city_select">合歡山西峰</li>
+						<li class="list-group-item btn_city_select">畢祿山</li>
+						<li class="list-group-item btn_city_select">南玉山</li>						
+						<li class="list-group-item btn_city_select">南雙頭山</li>
+						<li class="list-group-item btn_city_select">三叉山</li>
+						<li class="list-group-item btn_city_select">小關山</li>
+                        <li class="list-group-item btn_city_select">玉山南峰</li>
+						<li class="list-group-item btn_city_select">向陽山</li>
+						<li class="list-group-item btn_city_select">卑南主山</li>
+						<li class="list-group-item btn_city_select">東小南山</li>
+                        <li class="list-group-item btn_city_select">庫哈諾辛山</li>
+						<li class="list-group-item btn_city_select">海諾南山</li>
+						<li class="list-group-item btn_city_select">鹿山</li>						
+						<li class="list-group-item btn_city_select">雲峰</li>
+						<li class="list-group-item btn_city_select">塔芬山</li>
+						<li class="list-group-item btn_city_select">塔關山</li>
+                        <li class="list-group-item btn_city_select">轆轆山</li>
+						<li class="list-group-item btn_city_select">關山</li>
+						<li class="list-group-item btn_city_select">關山嶺山</li>
+						<li class="list-group-item btn_city_select">大武山</li>
+                        <li class="list-group-item btn_city_select">大雪山</li>
+						<li class="list-group-item btn_city_select">中雪山</li>
+						<li class="list-group-item btn_city_select">火石山</li>						
+						<li class="list-group-item btn_city_select">加利山</li>
+						<li class="list-group-item btn_city_select">大霸尖山</li>
+						<li class="list-group-item btn_city_select">雪山</li>
+                        <li class="list-group-item btn_city_select">班山</li>
+						<li class="list-group-item btn_city_select">馬那邦山</li>
+						<li class="list-group-item btn_city_select">加里山</li>
+						<li class="list-group-item btn_city_select">北坑山</li>
+                        <li class="list-group-item btn_city_select">老松山</li>
+						<li class="list-group-item btn_city_select">東陽山</li>
+						<li class="list-group-item btn_city_select">佳仁山</li>						
+						<li class="list-group-item btn_city_select">能甲山</li>
+						<li class="list-group-item btn_city_select">伊澤山</li>
+						<li class="list-group-item btn_city_select">池有山</li>
+                        <li class="list-group-item btn_city_select">桃山</li>
+						<li class="list-group-item btn_city_select">喀拉業山</li>
+						<li class="list-group-item btn_city_select">向天湖山</li>
+						<li class="list-group-item btn_city_select">霞山</li>
+                        <li class="list-group-item btn_city_select">霞喀羅大山</li>
+						<li class="list-group-item btn_city_select">虎禮山</li>
+						<li class="list-group-item btn_city_select">李棟山</li>						
+						<li class="list-group-item btn_city_select">烏來山</li>
+						<li class="list-group-item btn_city_select">玉山</li>
+						<li class="list-group-item btn_city_select">大屯山</li>						
+                        <li class="list-group-item btn_city_select">紗帽山</li>
+						<li class="list-group-item btn_city_select">劍潭山</li>
+						<li class="list-group-item btn_city_select">蟾蜍山</li>
+						<li class="list-group-item btn_city_select">七星山</li>
+                        <li class="list-group-item btn_city_select">山豬窟山</li>
+						<li class="list-group-item btn_city_select">南港山</li>
+						<li class="list-group-item btn_city_select">石尖山</li>						
+						<li class="list-group-item btn_city_select">五分山</li>
+						<li class="list-group-item btn_city_select">竹子山</li>
+						<li class="list-group-item btn_city_select">磺嘴山</li>						
+                        <li class="list-group-item btn_city_select">大桶山</li>
+						<li class="list-group-item btn_city_select">波路山</li>
+						<li class="list-group-item btn_city_select">三貂嶺</li>
+						<li class="list-group-item btn_city_select">三角崙山</li>
+                        <li class="list-group-item btn_city_select">燦光寮山</li>
+						<li class="list-group-item btn_city_select">基隆山</li>
+						<li class="list-group-item btn_city_select">檜山</li>						
+						<li class="list-group-item btn_city_select">石牛山</li>
+						<li class="list-group-item btn_city_select">金面山</li>
+						<li class="list-group-item btn_city_select">夫婦山</li>						
+                        <li class="list-group-item btn_city_select">低陸山</li>
+						<li class="list-group-item btn_city_select">良羽鳥山</li>
+						<li class="list-group-item btn_city_select">拉拉山</li>
+						<li class="list-group-item btn_city_select">東眼山</li>
+                        <li class="list-group-item btn_city_select">馬望曾呂山</li>
+						<li class="list-group-item btn_city_select">插天山</li>
+						<li class="list-group-item btn_city_select">塔曼山</li>
+                        <li class="list-group-item btn_city_select">十八尖山</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
